@@ -16,6 +16,7 @@ for PYBIN in /opt/python/cp3*/bin; do
     if [ "${PYBIN}" == "/opt/python/cp35-cp35m/bin" ]; then
         "${PYBIN}/pip" install --verbose xeus-python --no-index -f /io/wheelhouse
         find /opt/ -name "libxeus-python.so"
+        find /opt/ -name "libcrypto.so"
         export PATH_BU=$PATH
         export LD_LIBRARY_PATH_BU=$LD_LIBRARY_PATH
         export PATH=$PATH:${PYBIN}
